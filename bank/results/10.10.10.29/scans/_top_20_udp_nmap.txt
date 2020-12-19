@@ -1,0 +1,59 @@
+# Nmap 7.91 scan initiated Sat Dec 19 15:40:10 2020 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /root/security/hackthebox/bank/results/10.10.10.29/scans/_top_20_udp_nmap.txt -oX /root/security/hackthebox/bank/results/10.10.10.29/scans/xml/_top_20_udp_nmap.xml 10.10.10.29
+Nmap scan report for bank.htb (10.10.10.29)
+Host is up, received user-set.
+Scanned at 2020-12-19 15:40:11 JST for 324s
+
+PORT      STATE         SERVICE      REASON       VERSION
+53/udp    open          domain?      udp-response
+| fingerprint-strings: 
+|   DNS-SD: 
+|     _services
+|     _dns-sd
+|     _udp
+|_    local
+67/udp    open|filtered dhcps        no-response
+68/udp    open|filtered dhcpc        no-response
+69/udp    open|filtered tftp         no-response
+123/udp   open|filtered ntp          no-response
+135/udp   open|filtered msrpc        no-response
+137/udp   open|filtered netbios-ns   no-response
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   open|filtered netbios-ssn  no-response
+161/udp   open|filtered snmp         no-response
+162/udp   open|filtered snmptrap     no-response
+445/udp   open|filtered microsoft-ds no-response
+500/udp   open|filtered isakmp       no-response
+514/udp   open|filtered syslog       no-response
+520/udp   open|filtered route        no-response
+631/udp   open|filtered ipp          no-response
+1434/udp  open|filtered ms-sql-m     no-response
+1900/udp  open|filtered upnp         no-response
+4500/udp  open|filtered nat-t-ike    no-response
+49152/udp open|filtered unknown      no-response
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-UDP:V=7.91%I=9%D=12/19%Time=5FDDA076%P=x86_64-pc-linux-gnu%r(SIP
+SF:Options,C,"OP\xd0\x01\0\0\0\0\0\0\0\0")%r(NTPRequest,11,"\xe3\0\x80\x11
+SF:\0\x01\0\0\0\0\0\0\0\0\0\0\0")%r(SNMPv1public,C,"0\x82\x80\x01\0\0\0\0\
+SF:0\0\0\0")%r(SNMPv3GetRequest,C,"0:\x80\x01\0\0\0\0\0\0\0\0")%r(AFSVersi
+SF:onRequest,C,"\0\0\x81\x01\0\0\0\0\0\0\0\0")%r(ibm-db2-das-udp,C,"DB\xb0
+SF:\x01\0\0\0\0\0\0\0\0")%r(DNS-SD,2E,"\0\0\x80\x05\0\x01\0\0\0\0\0\0\t_se
+SF:rvices\x07_dns-sd\x04_udp\x05local\0\0\x0c\0\x01")%r(Citrix,C,"\x1e\0\x
+SF:81\x11\0\0\0\0\0\0\0\0")%r(Kerberos,C,"j\x81\xe8\x11\0\0\0\0\0\0\0\0")%
+SF:r(SqueezeCenter,C,"eI\xd0\x01\0\0\0\0\0\0\0\0")%r(Quake1_server_info,C,
+SF:"\x80\0\x80\x01\0\0\0\0\0\0\0\0")%r(serialnumberd,C,"SN\xd1\x11\0\0\0\0
+SF:\0\0\0\0")%r(sybaseanywhere,C,"\x1b\0\x80\x11\0\0\0\0\0\0\0\0")%r(memca
+SF:ched,C,"\0\x01\x80\x01\0\0\0\0\0\0\0\0");
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=12/19%OT=%CT=%CU=%PV=Y%G=N%TM=5FDDA18F%P=x86_64-pc-linux-gnu)
+U1(R=N)
+IE(R=N)
+
+
+TRACEROUTE (using proto 1/icmp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec 19 15:45:35 2020 -- 1 IP address (1 host up) scanned in 324.99 seconds

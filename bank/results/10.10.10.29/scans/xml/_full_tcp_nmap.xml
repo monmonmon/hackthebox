@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Dec 19 15:40:10 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/security/hackthebox/bank/results/10.10.10.29/scans/_full_tcp_nmap.txt -oX /root/security/hackthebox/bank/results/10.10.10.29/scans/xml/_full_tcp_nmap.xml 10.10.10.29 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/security/hackthebox/bank/results/10.10.10.29/scans/_full_tcp_nmap.txt -oX /root/security/hackthebox/bank/results/10.10.10.29/scans/xml/_full_tcp_nmap.xml 10.10.10.29" start="1608360010" startstr="Sat Dec 19 15:40:10 2020" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1608360011"/>
+<taskend task="NSE" time="1608360011"/>
+<taskbegin task="NSE" time="1608360011"/>
+<taskend task="NSE" time="1608360011"/>
+<taskbegin task="NSE" time="1608360011"/>
+<taskend task="NSE" time="1608360011"/>
+<taskbegin task="SYN Stealth Scan" time="1608360011"/>
+<taskprogress task="SYN Stealth Scan" time="1608360046" percent="0.31"/>
+<taskprogress task="SYN Stealth Scan" time="1608360076" percent="11.36" remaining="507" etc="1608360583"/>
+<taskprogress task="SYN Stealth Scan" time="1608360106" percent="23.43" remaining="311" etc="1608360416"/>
+<taskprogress task="SYN Stealth Scan" time="1608360136" percent="32.28" remaining="263" etc="1608360398"/>
+<taskprogress task="SYN Stealth Scan" time="1608360166" percent="44.14" remaining="197" etc="1608360362"/>
+<taskprogress task="SYN Stealth Scan" time="1608360196" percent="45.05" remaining="226" etc="1608360422"/>
+<taskprogress task="SYN Stealth Scan" time="1608360226" percent="45.10" remaining="262" etc="1608360488"/>
+<taskprogress task="SYN Stealth Scan" time="1608360256" percent="45.15" remaining="298" etc="1608360554"/>
+<taskprogress task="SYN Stealth Scan" time="1608360286" percent="45.20" remaining="334" etc="1608360619"/>
+<taskprogress task="SYN Stealth Scan" time="1608360316" percent="51.31" remaining="290" etc="1608360605"/>
+<taskprogress task="SYN Stealth Scan" time="1608360346" percent="63.44" remaining="194" etc="1608360539"/>
+<taskprogress task="SYN Stealth Scan" time="1608360376" percent="75.11" remaining="121" etc="1608360497"/>
+<taskprogress task="SYN Stealth Scan" time="1608360406" percent="87.44" remaining="57" etc="1608360463"/>
+<taskprogress task="SYN Stealth Scan" time="1608360466" percent="91.06" remaining="45" etc="1608360511"/>
+<taskprogress task="SYN Stealth Scan" time="1608360511" percent="91.13" remaining="49" etc="1608360560"/>
+<taskend task="SYN Stealth Scan" time="1608360546" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1608360546"/>
+<taskend task="Service scan" time="1608360553" extrainfo="3 services on 1 host"/>
+<taskbegin task="Traceroute" time="1608360570"/>
+<taskend task="Traceroute" time="1608360570"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1608360570"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1608360571"/>
+<taskbegin task="NSE" time="1608360571"/>
+<taskend task="NSE" time="1608360580"/>
+<taskbegin task="NSE" time="1608360580"/>
+<taskend task="NSE" time="1608360580"/>
+<taskbegin task="NSE" time="1608360580"/>
+<taskend task="NSE" time="1608360580"/>
+<host starttime="1608360011" endtime="1608360580"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.29" addrtype="ipv4"/>
+<hostnames>
+<hostname name="bank.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="resets" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="6.6.1p1 Ubuntu 2ubuntu2.8" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:6.6.1p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 08:ee:d0:30:d5:45:e4:59:db:4d:54:a8:dc:5c:ef:15 (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBAMJ+YATka9wvs0FTz8iNWs6uCiLqSFhmBYoYAorFpozVGkCkU1aEJ7biybFTw/qzS9pbSsaYA+3LyUyvh3BSPGEt1BgGW/H29MuXjkznwVz60JqL4GqaJzYSL3smYYdr3KdJQI/QSvf34WU3pife6LRmJaVk+ETh3wPclyecNtedAAAAFQC1Zb2O2LzvAWf20FdsK8HRPlrx1wAAAIBIBAhLmVd3Tz+o+6Oz39g4Um1le8d3DETINWk3myRvPw8hcnRwAFe1+14h3RX4fr+LKXoR/tYrI138PJyiyl+YtQWhZnJ7j8lqnKRU2YibtnUc44kP9FhUqeAcBNjj4qwG9GyQSWm/Q5CbOokgaa6WfdcnwsUMim0h2Ad8YdU1kAAAAIBy3dOOD8jKHeBdE/oXGG0X9tKSFZv1gPr/kZ7NfqUF0kHU3oZTNK8/2qR0SNHgrZ2cLgKTIuneGS8lauXjC66NNMoUkJcMHpwRkYC0A86LDmhES6OuPsQwAjr1AtUZn97QjYu1d6WPfhTdsRYBuCotgKh2SBkzV1Bcz77Tnp56JA==&#xa;  2048 b8:e0:15:48:2d:0d:f0:f1:73:33:b7:81:64:08:4a:91 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDc0rofjHtpSlqkDjjnkEiYcbUrMH0Q4a6PcxqsR3updDGBWu/RK7AGWRSjPn13uil/nl44XF/fkULy7FoXXskByLCHP8FS2gYJApQMvI9n81ERojEA0NIi6VZKP19bl1VFTk7Q5rEPIpab2xqYMBayb1ch7iP95n3iayvHEt/7cSTsddGWKeALi+rrujpnryNViiOIWpqDv+RWtbc2Wuc/FTeGSOt1LBTbtKcLwEehBG+Ym8o8iKTd+zfVudu7v1g3W2Aa3zLuTcePRKLUK3Q2D7k+5aJnWrekpiARQm3NmMkv1NuDLeW3amVBCv6DRJPBqEgSeGMGsnqkR8CKHO9/&#xa;  256 a0:4c:94:d1:7b:6e:a8:fd:07:fe:11:eb:88:d5:16:65 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDH30xnPq1XEub/UFQ2KoHXh9LFKMNMkt60xYF3OrEp1Y5XQd0QyeLXwm6tIqWtb0rWda/ivDgmiB4GzCIMf/HQ=&#xa;  256 2d:79:44:30:c8:bb:5e:8f:07:cf:5b:72:ef:a1:6d:67 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA8MYjFyo+4OwYGTzeuyNd998y6cOx56mIuciim1cvKh"><table>
+<elem key="type">ssh-dss</elem>
+<elem key="bits">1024</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAMJ+YATka9wvs0FTz8iNWs6uCiLqSFhmBYoYAorFpozVGkCkU1aEJ7biybFTw/qzS9pbSsaYA+3LyUyvh3BSPGEt1BgGW/H29MuXjkznwVz60JqL4GqaJzYSL3smYYdr3KdJQI/QSvf34WU3pife6LRmJaVk+ETh3wPclyecNtedAAAAFQC1Zb2O2LzvAWf20FdsK8HRPlrx1wAAAIBIBAhLmVd3Tz+o+6Oz39g4Um1le8d3DETINWk3myRvPw8hcnRwAFe1+14h3RX4fr+LKXoR/tYrI138PJyiyl+YtQWhZnJ7j8lqnKRU2YibtnUc44kP9FhUqeAcBNjj4qwG9GyQSWm/Q5CbOokgaa6WfdcnwsUMim0h2Ad8YdU1kAAAAIBy3dOOD8jKHeBdE/oXGG0X9tKSFZv1gPr/kZ7NfqUF0kHU3oZTNK8/2qR0SNHgrZ2cLgKTIuneGS8lauXjC66NNMoUkJcMHpwRkYC0A86LDmhES6OuPsQwAjr1AtUZn97QjYu1d6WPfhTdsRYBuCotgKh2SBkzV1Bcz77Tnp56JA==</elem>
+<elem key="fingerprint">08eed030d545e459db4d54a8dc5cef15</elem>
+</table>
+<table>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDc0rofjHtpSlqkDjjnkEiYcbUrMH0Q4a6PcxqsR3updDGBWu/RK7AGWRSjPn13uil/nl44XF/fkULy7FoXXskByLCHP8FS2gYJApQMvI9n81ERojEA0NIi6VZKP19bl1VFTk7Q5rEPIpab2xqYMBayb1ch7iP95n3iayvHEt/7cSTsddGWKeALi+rrujpnryNViiOIWpqDv+RWtbc2Wuc/FTeGSOt1LBTbtKcLwEehBG+Ym8o8iKTd+zfVudu7v1g3W2Aa3zLuTcePRKLUK3Q2D7k+5aJnWrekpiARQm3NmMkv1NuDLeW3amVBCv6DRJPBqEgSeGMGsnqkR8CKHO9/</elem>
+<elem key="fingerprint">b8e015482d0df0f17333b78164084a91</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDH30xnPq1XEub/UFQ2KoHXh9LFKMNMkt60xYF3OrEp1Y5XQd0QyeLXwm6tIqWtb0rWda/ivDgmiB4GzCIMf/HQ=</elem>
+<elem key="fingerprint">a04c94d17b6ea8fd07fe11eb88d51665</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIA8MYjFyo+4OwYGTzeuyNd998y6cOx56mIuciim1cvKh</elem>
+<elem key="fingerprint">2d794430c8bb5e8f07cf5b72efa16d67</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="domain" product="ISC BIND" version="9.9.5-3ubuntu0.14" extrainfo="Ubuntu Linux" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:isc:bind:9.9.5-3ubuntu0.14</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: 9.9.5-3ubuntu0.14-Ubuntu"><elem key="bind.version">9.9.5-3ubuntu0.14-Ubuntu</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.7" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.7</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.7 (Ubuntu)"><elem>Apache/2.4.7 (Ubuntu)</elem>
+</script><script id="http-title" output="HTB Bank - Login&#xa;Requested resource was login.php"><elem key="title">HTB Bank - Login</elem>
+<elem key="redirect_url">login.php</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="41904"/>
+<osmatch name="Linux 3.13" accuracy="95" line="63892">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 4.9" accuracy="95" line="65317">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="95" line="64174">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.18" accuracy="95" line="64450">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.18</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.2" accuracy="95" line="67298">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.8" accuracy="95" line="67900">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.8</cpe></osclass>
+</osmatch>
+<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="95" line="8401">
+<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="95"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="95" line="67954">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.12" accuracy="94" line="63648">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.12</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.8 - 3.11" accuracy="94" line="66291">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.91%E=4%D=12/19%OT=22%CT=1%CU=41904%PV=Y%DS=2%DC=T%G=Y%TM=5FDDA2&#xa;OS:84%P=x86_64-pc-linux-gnu)SEQ(SP=FA%GCD=1%ISR=104%TI=Z%CI=RD%II=I%TS=8)SE&#xa;OS:Q(SP=FA%GCD=1%ISR=102%TI=Z%CI=RD%TS=8)OPS(O1=NNT11%O2=M54DST11NW7%O3=NNT&#xa;OS:11%O4=M54DST11NW7%O5=NNT11%O6=M54DST11)WIN(W1=E3%W2=7120%W3=E3%W4=7120%W&#xa;OS:5=E3%W6=7120)ECN(R=Y%DF=Y%T=40%W=E3%O=NNT11%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O&#xa;OS:%A=O%F=AP%RD=0%Q=)T2(R=Y%DF=Y%T=40%W=E3%S=O%A=O%F=AP%O=NNT11%RD=0%Q=)T2(&#xa;OS:R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=E3%S=O%A=O%F=AP%O=NNT11%RD=0%Q=)T5(R=Y%DF=&#xa;OS:Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=E3%S=O%A=O%F=AP%O&#xa;OS:=NNT11%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N&#xa;OS:%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%C&#xa;OS:D=S)&#xa;"/>
+</os>
+<uptime seconds="4644" lastboot="Sat Dec 19 14:32:16 2020"/>
+<distance value="2"/>
+<tcpsequence index="250" difficulty="Good luck!" values="1C0C153A,4B388463,59BF8CB9,2E7EA1A6,6139011A,410DF61B"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="11AB08,11AB21,11AB3C,11AB53,11AB6C,11AB85"/>
+<trace port="61989" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="157.70"/>
+<hop ttl="2" ipaddr="10.10.10.29" rtt="157.81" host="bank.htb"/>
+</trace>
+<times srtt="155138" rttvar="6092" to="179506"/>
+</host>
+<taskbegin task="NSE" time="1608360580"/>
+<taskend task="NSE" time="1608360580"/>
+<taskbegin task="NSE" time="1608360580"/>
+<taskend task="NSE" time="1608360580"/>
+<taskbegin task="NSE" time="1608360580"/>
+<taskend task="NSE" time="1608360580"/>
+<runstats><finished time="1608360580" timestr="Sat Dec 19 15:49:40 2020" summary="Nmap done at Sat Dec 19 15:49:40 2020; 1 IP address (1 host up) scanned in 570.56 seconds" elapsed="570.56" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

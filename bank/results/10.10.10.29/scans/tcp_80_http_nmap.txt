@@ -1,0 +1,209 @@
+# Nmap 7.91 scan initiated Sat Dec 19 15:41:12 2020 as: nmap -vv --reason -Pn -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /root/security/hackthebox/bank/results/10.10.10.29/scans/tcp_80_http_nmap.txt -oX /root/security/hackthebox/bank/results/10.10.10.29/scans/xml/tcp_80_http_nmap.xml 10.10.10.29
+Nmap scan report for bank.htb (10.10.10.29)
+Host is up, received user-set (0.16s latency).
+Scanned at 2020-12-19 15:41:13 JST for 41s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.7 ((Ubuntu))
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=bank.htb
+|   url                  method
+|_  http://bank.htb:80/  FORM
+|_http-chrono: Request times for /; avg: 973.63ms; min: 616.50ms; max: 1300.85ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=bank.htb
+|     
+|     Path: http://bank.htb:80/assets/css/theme/styles.css
+|     Line number: 387
+|     Comment: 
+|         /** Login & Signup **/
+|     
+|     Path: http://bank.htb:80/assets/css/bootstrap.min.css
+|     Line number: 5
+|     Comment: 
+|         /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+|     
+|     Path: http://bank.htb:80/
+|     Line number: 17
+|     Comment: 
+|         <!-- Logo -->
+|     
+|     Path: http://bank.htb:80/assets/css/theme/styles.css
+|     Line number: 585
+|     Comment: 
+|         /* Mobile phones */
+|     
+|     Path: http://bank.htb:80/
+|     Line number: 48
+|     Comment: 
+|         <!-- Include all compiled plugins (below), or include individual files as needed -->
+|     
+|     Path: http://bank.htb:80/assets/css/theme/styles.css
+|     Line number: 590
+|     Comment: 
+|         /* Tablets */
+|     
+|     Path: http://bank.htb:80/assets/css/theme/styles.css
+|     Line number: 583
+|     Comment: 
+|         /* Responsive CSS */
+|     
+|     Path: http://bank.htb:80/assets/css/theme/styles.css
+|     Line number: 16
+|     Comment: 
+|         /* Footer */
+|     
+|     Path: http://bank.htb:80/assets/css/theme/styles.css
+|     Line number: 217
+|     Comment: 
+|         /* Sidebar navigation */
+|     
+|     Path: http://bank.htb:80/
+|     Line number: 9
+|     Comment: 
+|         <!-- styles -->
+|     
+|     Path: http://bank.htb:80/assets/css/theme/styles.css
+|     Line number: 612
+|     Comment: 
+|         /* Desktop */
+|     
+|     Path: http://bank.htb:80/
+|     Line number: 7
+|     Comment: 
+|         <!-- Bootstrap -->
+|     
+|     Path: http://bank.htb:80/assets/css/bootstrap.min.css
+|     Line number: 5
+|     Comment: 
+|         /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+|     
+|     Path: http://bank.htb:80/
+|     Line number: 46
+|     Comment: 
+|         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+|     
+|     Path: http://bank.htb:80/assets/css/bootstrap.min.css
+|     Line number: 6
+|     Comment: 
+|         /*# sourceMappingURL=bootstrap.min.css.map */
+|     
+|     Path: http://bank.htb:80/assets/css/bootstrap.min.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootstrap v3.3.7 (http://getbootstrap.com)
+|          * Copyright 2011-2016 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          */
+|     
+|     Path: http://bank.htb:80/assets/css/theme/styles.css
+|     Line number: 52
+|     Comment: 
+|_        /* Logo & Navigation */
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=bank.htb
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://bank.htb:80/
+|     Form id: 
+|_    Form action: 
+|_http-date: Sat, 19 Dec 2020 06:45:08 GMT; +3m42s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /login.php: Possible admin folder
+|_  /inc/: Potentially interesting directory w/ listing on 'apache/2.4.7 (ubuntu)'
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=bank.htb
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|   	http://bank.htb:80/index.html
+|   
+|   Error Code: 404
+|_  	http://bank.htb:80/assets/js/js/bootstrap.min.js
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Date: Sat, 19 Dec 2020 06:45:07 GMT
+|   Server: Apache/2.4.7 (Ubuntu)
+|   X-Powered-By: PHP/5.5.9-1ubuntu4.21
+|   Set-Cookie: HTBBankAuth=0rc0fl5raeit6s8g1759cj2ms7; path=/
+|   Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|   Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|   Pragma: no-cache
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 0eaeca7d9e9f322bc1601f36483dd3e1
+| Credits query returned unknown hash 0eaeca7d9e9f322bc1601f36483dd3e1
+|_Version from header x-powered-by: PHP/5.5.9-1ubuntu4.21
+| http-referer-checker: 
+| Spidering limited to: maxpagecount=30
+|_  https://code.jquery.com:443/jquery.js
+| http-security-headers: 
+|   Cache_Control: 
+|     Header: Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|   Pragma: 
+|     Header: Pragma: no-cache
+|   Expires: 
+|_    Header: Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /assets/css/
+|       css: 1
+|     /assets/css/theme/
+|       css: 1
+|     /assets/js/theme/
+|       js: 1
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /assets/css/theme/
+|   Total files found (by extension):
+|_    Other: 1; css: 2; js: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-title: HTB Bank - Login
+|_Requested resource was login.php
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Redirected To: login.php
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+| http-waf-detect: IDS/IPS/WAF detected:
+|_bank.htb:80/?p4yl04d3=<script>alert(document.cookie)</script>
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec 19 15:41:54 2020 -- 1 IP address (1 host up) scanned in 42.42 seconds

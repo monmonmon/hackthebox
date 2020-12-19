@@ -1,0 +1,65 @@
+# Nmap 7.91 scan initiated Sat Dec 19 15:40:10 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/security/hackthebox/bank/results/10.10.10.29/scans/_full_tcp_nmap.txt -oX /root/security/hackthebox/bank/results/10.10.10.29/scans/xml/_full_tcp_nmap.xml 10.10.10.29
+adjust_timeouts2: packet supposedly had rtt of -301878 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -301878 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -63017 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -63017 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -207284 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -207284 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -208423 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -208423 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -209299 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -209299 microseconds.  Ignoring time.
+Nmap scan report for bank.htb (10.10.10.29)
+Host is up, received user-set (0.16s latency).
+Scanned at 2020-12-19 15:40:11 JST for 569s
+Not shown: 65532 closed ports
+Reason: 65532 resets
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 08:ee:d0:30:d5:45:e4:59:db:4d:54:a8:dc:5c:ef:15 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAMJ+YATka9wvs0FTz8iNWs6uCiLqSFhmBYoYAorFpozVGkCkU1aEJ7biybFTw/qzS9pbSsaYA+3LyUyvh3BSPGEt1BgGW/H29MuXjkznwVz60JqL4GqaJzYSL3smYYdr3KdJQI/QSvf34WU3pife6LRmJaVk+ETh3wPclyecNtedAAAAFQC1Zb2O2LzvAWf20FdsK8HRPlrx1wAAAIBIBAhLmVd3Tz+o+6Oz39g4Um1le8d3DETINWk3myRvPw8hcnRwAFe1+14h3RX4fr+LKXoR/tYrI138PJyiyl+YtQWhZnJ7j8lqnKRU2YibtnUc44kP9FhUqeAcBNjj4qwG9GyQSWm/Q5CbOokgaa6WfdcnwsUMim0h2Ad8YdU1kAAAAIBy3dOOD8jKHeBdE/oXGG0X9tKSFZv1gPr/kZ7NfqUF0kHU3oZTNK8/2qR0SNHgrZ2cLgKTIuneGS8lauXjC66NNMoUkJcMHpwRkYC0A86LDmhES6OuPsQwAjr1AtUZn97QjYu1d6WPfhTdsRYBuCotgKh2SBkzV1Bcz77Tnp56JA==
+|   2048 b8:e0:15:48:2d:0d:f0:f1:73:33:b7:81:64:08:4a:91 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDc0rofjHtpSlqkDjjnkEiYcbUrMH0Q4a6PcxqsR3updDGBWu/RK7AGWRSjPn13uil/nl44XF/fkULy7FoXXskByLCHP8FS2gYJApQMvI9n81ERojEA0NIi6VZKP19bl1VFTk7Q5rEPIpab2xqYMBayb1ch7iP95n3iayvHEt/7cSTsddGWKeALi+rrujpnryNViiOIWpqDv+RWtbc2Wuc/FTeGSOt1LBTbtKcLwEehBG+Ym8o8iKTd+zfVudu7v1g3W2Aa3zLuTcePRKLUK3Q2D7k+5aJnWrekpiARQm3NmMkv1NuDLeW3amVBCv6DRJPBqEgSeGMGsnqkR8CKHO9/
+|   256 a0:4c:94:d1:7b:6e:a8:fd:07:fe:11:eb:88:d5:16:65 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDH30xnPq1XEub/UFQ2KoHXh9LFKMNMkt60xYF3OrEp1Y5XQd0QyeLXwm6tIqWtb0rWda/ivDgmiB4GzCIMf/HQ=
+|   256 2d:79:44:30:c8:bb:5e:8f:07:cf:5b:72:ef:a1:6d:67 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA8MYjFyo+4OwYGTzeuyNd998y6cOx56mIuciim1cvKh
+53/tcp open  domain  syn-ack ttl 63 ISC BIND 9.9.5-3ubuntu0.14 (Ubuntu Linux)
+| dns-nsid: 
+|_  bind.version: 9.9.5-3ubuntu0.14-Ubuntu
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.7 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+| http-title: HTB Bank - Login
+|_Requested resource was login.php
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.9 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), Linux 4.8 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 4.9 (95%), Linux 3.12 (94%), Linux 3.8 - 3.11 (94%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=12/19%OT=22%CT=1%CU=41904%PV=Y%DS=2%DC=T%G=Y%TM=5FDDA2
+OS:84%P=x86_64-pc-linux-gnu)SEQ(SP=FA%GCD=1%ISR=104%TI=Z%CI=RD%II=I%TS=8)SE
+OS:Q(SP=FA%GCD=1%ISR=102%TI=Z%CI=RD%TS=8)OPS(O1=NNT11%O2=M54DST11NW7%O3=NNT
+OS:11%O4=M54DST11NW7%O5=NNT11%O6=M54DST11)WIN(W1=E3%W2=7120%W3=E3%W4=7120%W
+OS:5=E3%W6=7120)ECN(R=Y%DF=Y%T=40%W=E3%O=NNT11%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O
+OS:%A=O%F=AP%RD=0%Q=)T2(R=Y%DF=Y%T=40%W=E3%S=O%A=O%F=AP%O=NNT11%RD=0%Q=)T2(
+OS:R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=E3%S=O%A=O%F=AP%O=NNT11%RD=0%Q=)T5(R=Y%DF=
+OS:Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=E3%S=O%A=O%F=AP%O
+OS:=NNT11%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N
+OS:%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%C
+OS:D=S)
+
+Uptime guess: 0.054 days (since Sat Dec 19 14:32:16 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=250 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 61989/tcp)
+HOP RTT       ADDRESS
+1   157.70 ms 10.10.14.1
+2   157.81 ms bank.htb (10.10.10.29)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec 19 15:49:40 2020 -- 1 IP address (1 host up) scanned in 570.56 seconds
